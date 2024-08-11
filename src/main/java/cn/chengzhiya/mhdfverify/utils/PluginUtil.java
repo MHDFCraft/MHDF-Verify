@@ -17,7 +17,7 @@ public final class PluginUtil {
                 ps.setString(1, pluginName);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
-                        return new Plugin(rs.getInt("ID"), pluginName, rs.getString("PluginVersion"));
+                        return new Plugin(rs.getInt("ID"), pluginName, rs.getString("PluginVersion"), rs.getInt("MaxClient"));
                     }
                 }
             }
@@ -33,7 +33,7 @@ public final class PluginUtil {
                 ps.setInt(1, pluginID);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
-                        return new Plugin(rs.getInt("ID"), rs.getString("PluginName"), rs.getString("PluginVersion"));
+                        return new Plugin(rs.getInt("ID"), rs.getString("PluginName"), rs.getString("PluginVersion"), rs.getInt("MaxClient"));
                     }
                 }
             }

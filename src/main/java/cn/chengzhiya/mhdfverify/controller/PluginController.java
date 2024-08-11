@@ -2,6 +2,7 @@ package cn.chengzhiya.mhdfverify.controller;
 
 import cn.chengzhiya.mhdfverify.entity.Plugin;
 import cn.chengzhiya.mhdfverify.entity.User;
+import cn.chengzhiya.mhdfverify.server.WebSocket;
 import cn.chengzhiya.mhdfverify.utils.*;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +28,7 @@ public class PluginController extends ABaseController {
     }
 
     @PostMapping("/verify")
-    public response verify(HttpServletRequest request, String userName, String password, String pluginName) throws Exception {
+    public response verify(HttpServletRequest request, String userName, String password, String pluginName, String mac) throws Exception {
         String ip = request.getRemoteAddr();
         if (userName != null) {
             if (password != null) {
@@ -40,8 +41,13 @@ public class PluginController extends ABaseController {
                             Plugin plugin = PluginUtil.getPlugin(pluginName);
                             if (plugin != null) {
                                 if (PluginUtil.verifyPlugin(user, plugin)) {
-                                    LogUtil.log(userName, pluginName, ip, "验证成功");
-                                    return success("验证成功");
+                                    if (WebSocket.getOnlineSessions(mac).size() <= plugin.getMaxClient()) {
+                                        LogUtil.log(userName, pluginName, ip, "验证成功");
+                                        return success("验证成功");
+                                    }else {
+                                        LogUtil.log(userName, pluginName, ip, "超出设备上线");
+                                        return error("超出设备上线");
+                                    }
                                 } else {
                                     LogUtil.log(userName, pluginName, ip, "验证失败");
                                     return error("验证失败");

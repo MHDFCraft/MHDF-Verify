@@ -30,7 +30,7 @@ public final class DatabaseUtil {
                 "    `ID` BIGINT NOT NULL AUTO_INCREMENT," +
                 "    `PluginName` VARCHAR(100) NOT NULL DEFAULT ''," +
                 "    `PluginVersion` VARCHAR(50) NOT NULL DEFAULT '1.0.0'," +
-                "    `ClientMax` BIGINT NOT NULL DEFAULT -1," +
+                "    `MaxClient` BIGINT NOT NULL DEFAULT -1," +
                 "    PRIMARY KEY (`ID`)," +
                 "    INDEX `PluginName` (`PluginName`)" +
                 ")" +

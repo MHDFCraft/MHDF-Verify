@@ -1,0 +1,18 @@
+#服务器配置
+server:
+  #端口
+  port: 8888
+  #SSL(Https+Wss)
+  ssl:
+    #开关
+    enabled: false
+    #证书位置
+    key-store: mhdf.love.jks
+    #证书密码
+    key-store-password: awa
+    #证书类型
+    key-store-type: JKS
+#以下配置禁止修改
+spring:
+  application:
+    name: "MHDF-Verify"

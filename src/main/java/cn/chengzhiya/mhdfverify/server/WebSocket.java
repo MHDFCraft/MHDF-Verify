@@ -22,9 +22,9 @@ public class WebSocket {
     private static final Set<Session> sessions = new CopyOnWriteArraySet<>();
     private static final HashMap<String, List<Session>> sessionMap = new HashMap<>();
 
-    public static List<Session> getOnlineSessions(String ip) {
-        if (sessionMap.get(ip) != null) {
-            return sessionMap.get(ip);
+    public static List<Session> getOnlineSessions(String mac) {
+        if (sessionMap.get(mac) != null) {
+            return sessionMap.get(mac);
         } else {
             return new ArrayList<>();
         }
