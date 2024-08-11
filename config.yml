@@ -1,0 +1,10 @@
+#数据库配置
+DatabaseSettings:
+  #地址
+  Host: 127.0.0.1:3306
+  #数据库
+  Database: MHDFVerify
+  #账户
+  User: root
+  #密码
+  Password: root
