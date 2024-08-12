@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://pic.imgdb.cn/item/665c036bd9c307b7e9170568.png" width="200" height="200" alt="MHDF-Tools">
+   <img src="https://files.superbed.cn/proxy/7468686c6f2633336b776c74736873327f7872327e7f797e736f327f7371337d2c247e242b782a2e2b2b7a25792e7a7a792b782e2a2a2a2c7a2f2c79252e287e2425257a2f2d2c32766c7b" width="200" height="200" alt="MHDF-Tools">
 </p>
 
 <div align="center">
@@ -32,13 +32,11 @@ _✨轻量 便携 安全 高效✨_
 
 ## 贡献者
 
-<a href="https://github.com/Love-MHDF/MHDF-Verify/graphs/contributors">
-  <img src="https://stg.contrib.rocks/image?repo=Love-MHDF/MHDF-Verify" />
-</a>
+[![](https://stg.contrib.rocks/image?repo=Love-MHDF/MHDF-Verify)](https://stg.contrib.rocks/image?repo=Love-MHDF/MHDF-Verify)
 
 ## Star
 
-[![Stargazers over time](https://starchart.cc/Love-MHDF/MHDF-Verify.svg?variant=adaptive)](https://starchart.cc/Love-MHDF/MHDF-Verify)
+[![](https://starchart.cc/Love-MHDF/MHDF-Verify.svg?variant=adaptive)](https://starchart.cc/Love-MHDF/MHDF-Verify)
 
 ## 特别感谢
 

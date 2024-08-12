@@ -62,7 +62,7 @@ public final class DatabaseUtil {
                 "    `User` VARCHAR(100) NOT NULL DEFAULT ''," +
                 "    `Plugin` VARCHAR(100) NOT NULL DEFAULT ''," +
                 "    `IP` VARCHAR(100) NOT NULL DEFAULT ''," +
-                "    `Log` LONGTEXT  NOT NULL DEFAULT ''," +
+                "    `Log` LONGTEXT NOT NULL," +
                 "    PRIMARY KEY (`ID`)," +
                 "    INDEX `User` (`User`)" +
                 ")" +
