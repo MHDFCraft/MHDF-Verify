@@ -1,0 +1,6 @@
+#验证配置
+VerifySettings:
+  #账户
+  User: 123456
+  #密码
+  Password: 123456

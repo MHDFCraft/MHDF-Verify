@@ -1,0 +1,5 @@
+name: Example
+version: '${project.version}'
+main: cn.chengzhiya.example.Example
+api-version: '1.20'
+load: STARTUP
