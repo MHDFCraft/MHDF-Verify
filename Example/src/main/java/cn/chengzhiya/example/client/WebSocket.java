@@ -14,14 +14,15 @@ public final class WebSocket extends Endpoint {
 
     public static void send(String message) {
         try {
-            if (session != null) {
-                if (session.isOpen()) {
-                    session.getAsyncRemote().sendText(message);
+            if (WebSocket.session != null) {
+                if (WebSocket.session.isOpen()) {
+                    WebSocket.session.getAsyncRemote().sendText(message);
                 } else {
-                    session = null;
+                    WebSocket.session = null;
                 }
             }
-        }catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
     }
 
     @Override
@@ -31,7 +32,7 @@ public final class WebSocket extends Endpoint {
 
     @Override
     public void onClose(Session session, CloseReason closeReason) {
-        session = null;
+        WebSocket.session = null;
         if (Bukkit.getPluginManager().getPlugin(getPluginName()) != null) {
             connectWebsocketServer();
         }
@@ -39,6 +40,6 @@ public final class WebSocket extends Endpoint {
 
     @Override
     public void onError(Session session, Throwable throwable) {
-        session = null;
+        WebSocket.session = null;
     }
 }
